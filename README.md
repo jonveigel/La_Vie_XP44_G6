@@ -1,11 +1,18 @@
 # La_Vie_XP44_G6
 
 <h3>hand on_3</h3>
-<div style="text-align: center">
-<img src="./img/la_vie-logo.png">
-<h1>clinica la_vie </h1>
+<div style="text-align: center"><h1>clinica la_vie </h1>
+<img src="./img/la_vie-logo.png"><br>
+<br>
 
-<p>Trabalho de Hand on 3, criaçao de API de uma clinica. API esse feito para agilizar o acesso dos Psicologos ao agendamento do dia e seus respectivos pacientes.</p>
+<br>
+
+<h2>💻 Sobre o projeto</h2>
+<p>Projeto solicitado pela Gama Academy XP44. <br>
+Na qual o objetivo é criar e manipular uma API via GIT e MySQL utilizando das liguagens SQL e JavaScript. <br><br>
+ Com os dados fornecidos na API, fazer no MVC as requisições de server, rotas, npm. <br>  E via MySQL fazer estruturaçao, atualizaçoes e consultas.<br>
+ E com isso criar um BANCO DE DADOS de uma clinica de psiquiatrica chamada LA VIE saude mental.</p>
+<br>
 
 desevolvido por:<br>
 <a href="https://github.com/jonveigel">Jonathan Veigel</a><br>
