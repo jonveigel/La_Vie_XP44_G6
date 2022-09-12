@@ -2,7 +2,7 @@
 
 <h3>hand on_3</h3>
 <div style="text-align: center"><h1>clinica la_vie </h1>
-<img src="./img/la_vie-logo.png"><br>
+<img src=".src/img/la_vie-logo.png"><br>
 <br>
 
 <br>
