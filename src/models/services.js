@@ -2,8 +2,8 @@ const db = require('../database/index');
 
 const { DataTypes } = require('sequelize');
 
-const psycho = require('../models/psycho');
-const patients = require('../models/patients');
+const psycho = require('./psycho');
+const patients = require('./patients');
 
 const services = db.define('services', {
     id: {

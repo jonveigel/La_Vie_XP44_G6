@@ -4,11 +4,11 @@ const patients = require('./patients');
 const psycho = require('./psycho');
 const services = require('./services');
 
-services.belongsToMany = (patients, {
+services.belongsTo(patients, {
     foreignKey: "patient_id"
 });
 
-services.belongsToMany = (psycho, {
+services.belongsTo(psycho, {
     foreignKey: 'psycho_id'
 });
 
