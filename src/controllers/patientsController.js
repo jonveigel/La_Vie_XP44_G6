@@ -10,7 +10,7 @@ const patientsController = {
         const listPatients = await patients.findAll();
         res.json(listPatients);
 
-    } catch (error) {
+    } catch (error) {  
 
         console.error(error.message);
         res.json({error: "vish deu ruim!"});
@@ -73,7 +73,7 @@ const patientsController = {
 
         try {
             const patientId = await patients.destroy( {where: {id} } );
-            res.status(204).json('');
+            res.status(204).json("");
 
             if(!patientId) {
                 return res.status(404).json("Não existe esse id!")
