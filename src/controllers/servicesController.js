@@ -1,4 +1,3 @@
-const { request } = require("express");
 const { services, psycho, patients } = require("../models/index");
 
 
