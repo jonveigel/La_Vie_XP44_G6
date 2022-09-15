@@ -23,4 +23,6 @@ routes.get('/services', servicesController.listServices);
 routes.get('/services/:id', servicesController.listbyId);
 routes.post('/services', servicesController.createService);
 
+routes.post('/login', authController.login);
+
 module.exports = routes;
