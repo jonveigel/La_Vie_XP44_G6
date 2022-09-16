@@ -17,7 +17,11 @@ const psychoController = {
   },
 
   listbyId: async (req, res) => {
+
     //Trazer todas as informações, menos a senha
+
+
+
 
     const { id } = req.params;
 
@@ -25,11 +29,18 @@ const psychoController = {
       const psychobyId = await psycho.findByPk(id);
 
       if (!psychobyId) {
+
         return res.json("Id não encontrado.");
       }
 
       res.status(200).json(psychobyId);
       //erro 404
+
+        return res.status(404).json("Id não encontrado.");
+      }
+
+      res.status(200).json(psychobyId);
+
     } catch (error) {
       res.status(500).json("Código de erro interno.");
     }
@@ -47,9 +58,14 @@ const psychoController = {
       });
 
       return res.status(201).json(newPsycho);
+
       //erro 400
     } catch (error) {
       res.status(500).json("Código de erro interno.");
+
+    } catch (error) {
+      res.status(400).json("Não foi possivel cadastrar!");
+
     }
   },
 
