@@ -1,31 +1,33 @@
-const db = require('../database/index');
+const db = require("../database/index");
 
-const { DataTypes } = require('sequelize');
+const { DataTypes } = require("sequelize");
 
-const patients = db.define("patients", {
+const patients = db.define(
+  "patients",
+  {
     id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
     },
     name_patient: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     born: {
-        type: DataTypes.DATE,
-        allowNull: false,
+      type: DataTypes.DATE,
+      allowNull: false,
     },
     email: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-},
-{
-    tableName: 'patients',
+  },
+  {
+    tableName: "patients",
     timestamps: false,
-    underscored: true
-});
+    underscored: true,
+  }
+);
 
 module.exports = patients;
-

@@ -1,18 +1,15 @@
-const db = require('../database/index');
+const db = require("../database/index");
 
-const patients = require('./patients');
-const psycho = require('./psycho');
-const services = require('./services');
+const patients = require("./patients");
+const psycho = require("./psycho");
+const services = require("./services");
 
 services.belongsTo(patients, {
-    foreignKey: "patient_id"
+  foreignKey: "patient_id",
 });
 
 services.belongsTo(psycho, {
-    foreignKey: 'psycho_id'
+  foreignKey: "psycho_id",
 });
 
-module.exports = { patients,
-    psycho,
-    services
-};
+module.exports = { patients, psycho, services };

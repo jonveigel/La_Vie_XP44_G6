@@ -1,60 +1,47 @@
 const { services, psycho, patients } = require("../models/index");
 
-
 const servicesController = {
+  listServices: async (req, res) => {
+    try {
+      const listallServices = await services.findAll({ include: patients });
 
-    listServices: async (req, res) => {
-        try {
-            const listallServices = await services.findAll( { include: patients } );
-
-            res.json(listallServices);
-
-        } catch (error) {
-
-            res.json({error: "deu ruim!"})
-
-        }
-    },
-
-    listbyId: async (req, res) => {
-        try {
-
-            const { id } = req.params;
-
-            const listService = await services.findByPk(id);
-
-            if(listService) {
-                return res.json(listService);
-            }
-
-            res.json("erro")
-
-        } catch (error) {
-
-            console.log("error")
-            
-        }
-    },
-
-    createService: async (req, res) => {
-
-        const { patient_id, psycho_id, service_date, note } = req.body;
-        
-        try {
-            
-            const newService = await services.create( { patient_id, psycho_id, service_date, note } );
-
-            return res.status(201).json(newService);
-
-        } catch (error) {
-            
-            console.error(error.message)
-            res.status(500).json({error: "deu ruim!"})
-            
-        }
+      res.status(200).json(listallServices);
+    } catch (error) {
+      res.status(500).json("Código de erro interno.");
     }
+  },
 
-}
+  listbyId: async (req, res) => {
+    try {
+      const { id } = req.params;
+
+      const listService = await services.findByPk(id);
+
+      if (listService) {
+        return res.status(200).json(listService);
+      }
+
+      res.status(404).json("Id não encontrado.");
+    } catch (error) {
+      res.status(500).json("Código de erro interno.");
+    }
+  },
+
+  createService: async (req, res) => {
+    const { patient_id, psycho_id, service_date, note } = req.body;
+
+    try {
+      const newService = await services.create({
+        patient_id,
+        psycho_id,
+        service_date,
+        note,
+      });
+      return res.status(201).json(newService);
+    } catch (error) {
+      res.status(400).json("Não foi possivel cadastrar!");
+    }
+  },
+};
 
 module.exports = servicesController;
-

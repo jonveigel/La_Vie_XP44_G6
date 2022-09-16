@@ -1,3 +1,3 @@
-module.exports = { 
-    key: "laviexp44g6"
-}
+module.exports = {
+  key: "laviexp44g6",
+};
