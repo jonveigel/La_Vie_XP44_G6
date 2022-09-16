@@ -1,5 +1,10 @@
+
+CREATE DATABASE  IF NOT EXISTS `la_vie` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `la_vie`;
+
 CREATE DATABASE  IF NOT EXISTS `la_vie2` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `la_vie2`;
+USE `la_vie`;
+
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: la_vie
@@ -98,7 +103,11 @@ CREATE TABLE `services` (
 
 LOCK TABLES `services` WRITE;
 /*!40000 ALTER TABLE `services` DISABLE KEYS */;
+
+INSERT INTO `services` VALUES (2,2,1,'2022-10-20','Hello World!(services(2)).'),(3,3,2,'2022-11-14','Paciente com doença mental severa (causa: JavaScript'),(1,1,2,'2022-09-20','Hello World!(services(1)).'),(2,2,1,'2022-10-20','Hello World!(services(2)).'),(5,2,1,'2022-10-20','Hello World!(services(2)).'),(6,2,1,'2022-10-20','Hello World!(services(2)).'),(8,4,4,'1997-09-20','crazy World!(services(4)).'),(9,7,2,'1994-10-23','my World!(services(6)).'),(10,19,13,'2021-11-01','my World!(services(6)).'),(11,13,13,'2013-01-13','os crazy reunidos'),(12,11,3,'2011-07-17','os crazy reunidos'),(13,7,7,'2017-02-27','consulta dificil'),(18,6,12,'2009-12-07','consulta dificil'),(19,20,12,'2019-10-03','consulta suave');
+
 INSERT INTO `services` VALUES (2,2,1,'2022-10-20','Hello World!(services(2)).'),(3,3,2,'2022-11-14','Paciente com doença mental severa (causa: JavaScript');
+
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

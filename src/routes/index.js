@@ -1,4 +1,11 @@
 const express = require("express");
+
+
+const patientsController = require("../controllers/patientsController");
+const servicesController = require("../controllers/servicesController");
+const psychoController = require("../controllers/psychoController");
+const authController = require("../controllers/authController");
+
 const routes = express.Router();
 
 const patientsController = require("../controllers/patientsController");
@@ -8,9 +15,14 @@ const authController = require("../controllers/authController");
 
 
 
+
 routes.get("/psycho", psychoController.listPsycho);
 routes.get("/psycho/:id", psychoController.listbyId);
+
+routes.post("/psycho", psychoController.createPsycho);
+
 routes.post("/psycho",  psychoController.createPsycho);
+
 routes.put("/psycho/:id", psychoController.update);
 routes.delete("/psycho/:id", psychoController.destroy);
 

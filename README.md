@@ -13,6 +13,29 @@ Na qual o objetivo é criar e manipular uma API via GIT e MySQL utilizando das l
  Com os dados fornecidos na API, fazer no MVC as requisições de server, rotas, npm. <br>  E via MySQL fazer estruturaçao, atualizaçoes e consultas.<br>
  E com isso criar um BANCO DE DADOS de uma clinica de psiquiatrica chamada LA VIE saude mental.</p>
 <br>
+<h3>✔️ Etapas e funcionalidades:</h3>
+ Criar a funcionalidade "Login" utilizando o método POST.
+ Criar o CRUD Doutores, que utiliza GET, POST, PUT e DELETE
+ Criar o CRUD Pacientes, que utiliza GET, POST, PUT e DELETE
+ Criar o CRUD Atendimentos, que utiliza GET e POST.
+ Criar a Documentação da API
+ Criar um Dashboard<br>
+<h3><strong>Avaliação</strong></h3>
+Boas práticas em relação ao uso de JS
+Boa organização do projeto usando os princípios do MVC
+Validação dos dados que entram na api
+Feedback de erros para os usuários
+Metodologia Ágil Scrum
+Utilizar boas práticas de versionamento de código com Git
+<h2>🛠 Tecnologias</h2>
+As seguintes ferramentas foram usadas na construção do projeto:
+
+[JavaScript]
+[Node]
+[Git]
+[Express]
+[MySQL]
+[Banco de Dados]
 
 desevolvido por:<br>
 <a href="https://github.com/jonveigel">Jonathan Veigel</a><br>
@@ -24,17 +47,13 @@ desevolvido por:<br>
 <a href="https://github.com/danilordev">Danilo Rodrigues </a><br>
 <img src="https://avatars.githubusercontent.com/u/109250477?v=4" height="70" width="70" alt="imagens github"><br>
 
-<a href="#">04</a><br>
-<img src="#" height="70" width="70" alt="imagens github"><br>
-
-<a href="#">05</a><br>
-<img src="#" height="70" width="70" alt="imagens github"><br>
-
-<a href="#">06</a><br>
-<img src="#" height="70" width="70" alt="imagens github"><br>
 
 
 <h3>Segue abaixo Prints e esquemas</h3>
 <!--prints -->
-
 </div>
+<img src= "./src/img/esquema.png" height="200" width="300">
+<img src= "./src/img/serviços.png" height="200" width="300">
+<img src= "./src/img/pacientes.png" height="200" width="300">
+<img src= "./src/img/psicologos.png" height="200" width="300">
+

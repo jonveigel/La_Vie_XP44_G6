@@ -37,9 +37,17 @@ const servicesController = {
         service_date,
         note,
       });
+
+      //Verificar token JWT
+      //Verificar erro 400
+      return res.status(201).json(newService);
+    } catch (error) {
+      res.status(500).json("Código de erro interno.");
+
       return res.status(201).json(newService);
     } catch (error) {
       res.status(400).json("Não foi possivel cadastrar!");
+
     }
   },
 };

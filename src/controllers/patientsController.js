@@ -10,8 +10,15 @@ const patientsController = {
     }
   },
 
+
   listbyId: async (req, res) => {
     const { id } = req.params;
+
+
+
+  listbyId: async (req, res) => {
+    const { id } = req.params;
+
 
     try {
       const findbyId = await patients.findByPk(id);
@@ -24,6 +31,33 @@ const patientsController = {
       res.status(500).json("Código de erro interno.");
     }
   },
+
+
+  createPatients: async (req, res) => {
+    try {
+      const { name_patient, born, email } = req.body;
+      const newPatient = await patients.create({ name_patient, born, email });
+
+      res.status(201).json(newPatient);
+      //erro 400
+    } catch (error) {
+      res.status(500).json("Código de erro interno.");
+    }
+  },
+
+  update: async (req, res) => {
+    const { id } = req.params;
+
+    try {
+      const { name_patient, born, email } = req.body;
+
+      await patients.update({ name_patient, born, email }, { where: { id } });
+
+      return res.status(200).json("Patient att!");
+      //erro 400
+    } catch (error) {
+      res.status(500).json("Código de erro interno.");
+
 
   createPatients: async (req, res) => {
     try {
@@ -55,6 +89,7 @@ const patientsController = {
       res.status(200).json(updatePatient);
     } catch (error) {
       res.status(400).json("Não foi possivel atualizar!");
+
     }
   },
 
