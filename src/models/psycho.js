@@ -1,35 +1,37 @@
-const db = require('../database/index');
+const db = require("../database/index");
 
-const { DataTypes } = require('sequelize');
+const { DataTypes } = require("sequelize");
 
-const psycho = db.define("psycho", {
+const psycho = db.define(
+  "psycho",
+  {
     id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
     },
     name_psycho: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     email_psycho: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     pass: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     presentation: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-},
-{
-    tableName: 'psycho',
+  },
+  {
+    tableName: "psycho",
     timestamps: false,
-    underscored: true
-});
+    underscored: true,
+  }
+);
 
 module.exports = psycho;
-
