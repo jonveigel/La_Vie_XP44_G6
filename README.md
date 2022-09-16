@@ -24,17 +24,13 @@ desevolvido por:<br>
 <a href="https://github.com/danilordev">Danilo Rodrigues </a><br>
 <img src="https://avatars.githubusercontent.com/u/109250477?v=4" height="70" width="70" alt="imagens github"><br>
 
-<a href="#">04</a><br>
-<img src="#" height="70" width="70" alt="imagens github"><br>
-
-<a href="#">05</a><br>
-<img src="#" height="70" width="70" alt="imagens github"><br>
-
-<a href="#">06</a><br>
-<img src="#" height="70" width="70" alt="imagens github"><br>
 
 
 <h3>Segue abaixo Prints e esquemas</h3>
 <!--prints -->
-
 </div>
+<img src= "./src/img/esquema.png" height="200" width="300">
+<img src= "./src/img/serviços.png" height="200" width="300">
+<img src= "./src/img/pacientes.png" height="200" width="300">
+<img src= "./src/img/psicologos.png" height="200" width="300">
+
