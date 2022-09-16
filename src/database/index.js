@@ -1,14 +1,8 @@
 const Sequelize = require("sequelize");
 
-
-const DB_NAME = "la_vie";
-const DB_USER = "root";
-const DB_PASS = "root";
-
 const DB_NAME = "la_vie2";
 const DB_USER = "root";
 const DB_PASS = "0419";
-
 const DB_CONFIG = {
   dialect: "mysql",
   host: "localhost",
